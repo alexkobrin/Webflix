@@ -1,0 +1,85 @@
+.enjoy {
+    background: #000;
+  
+
+}
+.enjoy__bg {
+    height: 13px;
+    background-color: #818094;
+    opacity: 0.3;
+}
+.enjoy__h1,
+.download__h1 {
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin-bottom: .5rem;
+}
+        .enjoy__h3,
+        .download__h2 {
+            margin-top: 2rem;
+            font-size: 1.625rem;
+            font-weight: 400;
+        }
+.enjoy__inner,
+.download__inner {
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .enjoy__text {
+        font-weight: normal;
+        max-width: 550px;
+        width: 100%;
+       
+        
+    }
+    .enjoy__image {
+        width: 400px;
+        height: 300px;
+        position: relative;
+         z-index: 10;
+        img {
+         width: 100%;
+        
+        }
+        .enjoy__video {
+            width: 73%;
+            height: 80%;
+            position: absolute;
+            top: 24px;
+            left: 55px;
+           z-index: -1;
+           .enjoy__video-card {
+               width: 100%;
+               height: 100%;
+           }
+        }
+    }
+}
+
+.download {
+    margin-top: 100px;
+}
+.download__text {
+    max-width: 650px;
+}
+
+.enjoy__image {
+    width: 400px;
+    height: 300px;
+    position: relative;
+     z-index: 10;
+}
+ .enjoy__video2   {
+     position: absolute;
+     width: 400px;
+    height: 300px;
+    top: -18px;
+    left: 74px;
+   z-index: -1;
+  video {
+    width: 246px;
+    height: 220px;
+  }
+}
