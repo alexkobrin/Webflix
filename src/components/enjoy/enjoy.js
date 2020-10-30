@@ -12,8 +12,8 @@ function enjoy() {
             <div className="container">
                 <div className="enjoy__inner">
                     <div className="enjoy__text">
-                        <h1 className="enjoy__h1"> Enjoy om your TV</h1>
-                        <div className="enjoy__h3"> Watch your favorites movies in TV , Blu-ray players, and more</div>
+                        <h1 className="enjoy__h1"> Enjoy on your TV</h1>
+                        <div className="enjoy__h3"> Watch your movies on TV , Blu-ray players, and more</div>
                     </div>
                     <div className="enjoy__image">
                             <img src={Tv} alt="" />                        
@@ -37,7 +37,7 @@ function enjoy() {
                     </div>
                     <div className="download__text">
                         <div className="download__h1">
-                        Download your shows to watch offline.
+                        Download your shows to watch offline
                         </div>
                         <div className="download__h2">
                         Save your favorites easily and always have something to watch.
@@ -51,7 +51,7 @@ function enjoy() {
             <div className="container">
             <div className="enjoy__inner">
                     <div className="enjoy__text">
-                        <h1 className="enjoy__h1">Watch everywhere.</h1>
+                        <h1 className="enjoy__h1">Watch everywhere</h1>
                         <div className="enjoy__h3">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</div>
                     </div>
                     <div className="enjoy__image">
