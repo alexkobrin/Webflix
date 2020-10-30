@@ -46,6 +46,7 @@ li {
    margin: 0;
    padding: 0;
    display: inline-block;
+   
 }
 
 a {
@@ -53,7 +54,9 @@ a {
    display: inline-block;
    color: #000;
    text-transform: none;
-
+}
+a:hover {
+   text-decoration: none; 
 }
 
 h1,
