@@ -19,8 +19,6 @@ function search(props) {
 
                             className="search-box__input"
                             id="q"
-                          // onclick={handleChangle}
-                           // onChange={handleChangle.bind(this)}
                             type="text"
                             placeholder=""
 

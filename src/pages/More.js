@@ -71,6 +71,7 @@ class More extends Component {
         })
         return suggestions.title
     }
+
     render() {
         const { value, suggestions } = this.state;
         return (
@@ -113,4 +114,5 @@ class More extends Component {
         )
     }
 }
+
 export default More

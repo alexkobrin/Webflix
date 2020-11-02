@@ -7,6 +7,7 @@ function navItem() {
        
          <Link className="navLink" to="/">Home</Link> 
          <Link className="navLink" to="/find">More Details</Link> 
+         <Link className="navLink" to="/origin">Origin</Link> 
          <Link className="navLink" to="/auth">Sign In</Link> 
         
       </ul>
