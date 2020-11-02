@@ -1,36 +1,40 @@
 import React, { Component } from 'react'
-import Search from '../components/search/search'
+//import Search from '../components/search/search'
 import Card from '../components/card/card';
 import Header from '../components/header/header'
+import Autosuggest from 'react-autosuggest';
+import axios from 'axios';
+import './more.scss'
 
 let url = ''
-
 class More extends Component {
-
     constructor(props) {
         super(props)
         this.state = {
             movieID: 13,
-            loading: []
+            value: "",
+            suggestions: [],
+
         }
     }
-
-
-
-    // `https://api.themoviedb.org/3/search/movie?api_key=24cfed25ea68b234c8167f71ba903910&query=${querry}`
     componentDidMount() {
         this.fetchMovie(url)
     }
-    fetchMovie = (querry) => {
-        console.log(querry)
-        if (querry !== null) {
-            url = `https://api.themoviedb.org/3/search/movie?api_key=24cfed25ea68b234c8167f71ba903910&query=${querry}`
-        }
+    componentDidUpdate(prevProps ,prevState) {
+        if (this.state.movieID !== prevState.movieID) { 
+            this.fetchMovie(url)
+        } 
+    }
+    fetchMovie = () => {
+        // url = `https://api.themoviedb.org/3/movie/${querry}?api_key=24cfed25ea68b234c8167f71ba903910`
+        //  url = `https://api.themoviedb.org/3/search/movie?api_key=24cfed25ea68b234c8167f71ba903910&query=${this.state.value}`
+        // url = `https://api.themoviedb.org/3/search/movie?api_key=24cfed25ea68b234c8167f71ba903910&query=${this.state.value}`
         url = `https://api.themoviedb.org/3/movie/${this.state.movieID}?api_key=24cfed25ea68b234c8167f71ba903910`
         fetch(url)
             .then(response => response.json())
             .then(data => {
                 this.setState({
+                    ...this.state,
                     movieId: data.id,
                     title: data.original_title,
                     moto: data.tagline,
@@ -46,44 +50,67 @@ class More extends Component {
                 })
 
             })
+    }
+    onChange = (event, { newValue }) => {
+        this.setState({
+            value: newValue
+        });
+    };
 
+    onSuggestionsClearRequested = () => {
+        this.setState({
+            suggestions: [],
+            value: ''
+        });
+    };
+    getSuggestionValue = (suggestions) => {
+        const suggestion = suggestions.id
+        this.setState({
+            ...this.state,
+            movieID: suggestion
+        })
+        return suggestions.title
     }
     render() {
+        const { value, suggestions } = this.state;
         return (
             <div className="more">
                 <Header />
-                <Search fetchMovie={this.fetchMovie.bind(this)} />
+                <div className="container">
+                    <Autosuggest
+                        inputProps={{
+                            placeholder: "Find your movies",
+                            name: "title",
+                            value,
+                            onChange: this.onChange
+                        }}
+                        suggestions={suggestions}
+                        onSuggestionsFetchRequested={async ({ value }) => {
+                            if (!value) {
+                                // suggestions([]); 
+                                return;
+                            }
+                            try {
+                                const result = await axios.get(
+                                    `https://api.themoviedb.org/3/search/movie?api_key=24cfed25ea68b234c8167f71ba903910&query=${value}`
+                                )
+                                this.setState({
+                                    suggestions: result.data.results
+                                })
+                            } catch (e) {
+                                console.log(e)
+                            }
+                        }}
+                        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                        getSuggestionValue={this.getSuggestionValue}
+                        renderSuggestion={suggestions => (
+                            <div > {suggestions.title} </div>
+                        )}
+                    />
+                </div>
                 <Card data={this.state} />
             </div>
         )
     }
-
-
-    //      suggests = new Bloodhound({
-    //         datumTokenizer: function(datum) {
-    //           return Bloodhound.tokenizers.whitespace(datum.value);
-    //         },
-    //         queryTokenizer: Bloodhound.tokenizers.whitespace,
-    //         remote: {
-    //           url: 'https://api.themoviedb.org/3/search/movie?query=%QUERY&api_key=24cfed25ea68b234c8167f71ba903910',
-    //           filter: function(movies) {
-    //             // Map the remote source JSON array to a JavaScript object array
-    //             return $.map(movies.results, function(movie) {
-    //               return {
-    //                 value: movie.original_title, // search original title
-    //                 id: movie.id // get ID of movie simultaniously
-    //               };
-    //             });
-    //           } // end filter
-    //         } // end remote
-    //       }); // end new Bloodhound
-
-    //    suggests.initialize(); // initialise bloodhound suggestion engine
-
-
-
-
-
 }
-
 export default More

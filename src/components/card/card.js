@@ -6,7 +6,10 @@ import { Container, Row, Col } from 'reactstrap';
 
 function Card(props) {
     let data = props.data
-
+    let imageUrl =""
+ if (data.poster !==undefined) {
+      imageUrl= ` https://image.tmdb.org/t/p/w500${data.poster} ` 
+ }
     useEffect(() => {
         let more = document.body.getElementsByClassName("more")
         let re = more[0].setAttribute("style", `background-image: url(https://image.tmdb.org/t/p/original${data.backdrops})`)
@@ -15,7 +18,7 @@ function Card(props) {
 
 
     let resultString = null
-    let imageUrl = ` https://image.tmdb.org/t/p/w500${data.poster} `
+
     const arrToString = (arr) => {
         const nestedArr = []
         if (arr !== undefined) {

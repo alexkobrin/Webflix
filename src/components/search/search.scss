@@ -1,9 +1,7 @@
 .form-container {
-
 position: relative;
 margin-bottom: 1rem;
 margin-left: auto;
- 
 text-align: right;
 
 }
@@ -20,12 +18,12 @@ text-align: right;
     color: #fff
    
   }
-  .search-box__input:focus ~ .placeLabel {
-    top:-16px;
-     right: 230px;
-    font-size:14px;
-    color:#fff;
-  }
+  // .search-box__input:focus ~ .placeLabel {
+  //   top:-16px;
+  //    right: 230px;
+  //   font-size:14px;
+  //   color:#fff;
+  // }
   
   
   /* LABEL ======================================= */

@@ -2,15 +2,14 @@ import React from 'react';
 import './search.scss';
 function search(props) {
 
-    const handleChangle = event => {
+    // const handleChangle = event => {
 
-        if(event !== undefined) {
-                     let querry = ''
-       return  querry = event.target.value
-        }
-      
-        
-    }
+    //     if(event !== undefined) {
+    //                  let querry = ''
+    //    return  querry = event.target.value
+    //     }
+   
+    // }
     return (
         <div className="container">
             <div className="form-container">
@@ -20,7 +19,7 @@ function search(props) {
 
                             className="search-box__input"
                             id="q"
-                           onclick={handleChangle}
+                          // onclick={handleChangle}
                            // onChange={handleChangle.bind(this)}
                             type="text"
                             placeholder=""
