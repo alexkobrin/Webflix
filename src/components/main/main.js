@@ -1,8 +1,25 @@
 import React from 'react';
 import Header from '../header/header';
+import {useHistory } from "react-router-dom";
 import './main.scss';
 
-function main() {
+
+function Main() {
+  
+  let history = useHistory();
+
+ const submitHandler = (event) => {
+  event.preventDefault()
+  history.push("/auth")
+ }
+
+ const inputChangeHandler = (event) =>{
+   const inputValue = event.target.value
+   console.log(inputValue)   
+   localStorage.setItem("email" , inputValue)
+
+ }
+
   return (
     <header className="header">
      <Header/>
@@ -14,16 +31,16 @@ function main() {
             <h3 className="main-h3">Watch everywhere. Cansel anytime</h3>
           </div>
           <div className="main-form">
-            <form action="" method="GET">
+            <form onSubmit={submitHandler}  method="GET">
               <div className="email-form__inner">
                 <div className="email-form__input">
                   <label className="main-label" for="main-input" placeholder="email">
-                  <input id="main-input" className="main-input"  type="email"   minLength="5" maxLength="40" />
+                  <input id="main-input" onChange={inputChangeHandler} className="main-input"  type="email"   minLength="5" maxLength="40" />
                <label className="placeLabel">Email adress</label>
                </label>
                 </div>
                 <div className="email-form__button">
-                  <button className="main-button">
+                  <button  className="main-button">
                     <span>TRY FOR 50% OFF</span>
                   </button>
                 </div>
@@ -40,4 +57,4 @@ function main() {
   )
 }
 
-export default main
+export default Main

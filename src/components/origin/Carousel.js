@@ -9,22 +9,17 @@ export default class Carousel extends Component {
         this.state = {
             trending: [],
             popular: [],
-
+            tvShow: [],
             movieId: ""
 
         }
     }
-
-
     componentDidMount() {
-        axios.get("https:api.themoviedb.org/3/discover/movie?api_key=24cfed25ea68b234c8167f71ba903910&sort_by=popularity.desc&primary_release_year=2020")
+        axios.get("https:api.themoviedb.org/3/movie/upcoming?api_key=24cfed25ea68b234c8167f71ba903910&language=en-US&page=1")
             .then(response => {
                 this.setState({
                     trending: response.data.results
-
                 })
-                console.log(response.data.results
-                )
             })
 
         axios.get("https:api.themoviedb.org/3/movie/popular?api_key=24cfed25ea68b234c8167f71ba903910&language=en-US")
@@ -32,18 +27,16 @@ export default class Carousel extends Component {
                 this.setState({
                     popular: response.data.results
                 })
+            }) 
+
+        axios.get("https:api.themoviedb.org/3/discover/tv?api_key=24cfed25ea68b234c8167f71ba903910&language=en-US&page=1")
+            .then(response => {
+                this.setState({
+                    tvShow: response.data.results
+                }) 
             })
-
-
-
-
     }
-
-
-
     render() {
-
-
         const settings = {
             dots: false,
             infinite: true,
@@ -66,11 +59,12 @@ export default class Carousel extends Component {
         };
         return (
             <div>
-                <h2 className="carousel-suptitle"   >Trending</h2>
+                <h2 className="carousel-suptitle">Top upcoming movies in theatres</h2>
                 <Slider {...settings}>
                     {this.state.trending.map((film, index) => (
                         <div className="carousel-item" key="index">
-                            <img src={`https://image.tmdb.org/t/p/w500/${film.poster_path}`} alt="" />
+                           
+                            <img onClick={this.props.clicked.bind(this, film.id)} src={`https://image.tmdb.org/t/p/w500/${film.poster_path}`} alt="" />
                             <div className="rating">
                                 <div className="percent">
                                     <span>{`${film.vote_average * 10}`}</span>
@@ -83,13 +77,26 @@ export default class Carousel extends Component {
                 </Slider>
                 <h2 className="carousel-suptitle">Now Popular</h2>
                 <Slider {...settings}>
-
                     {this.state.popular.map((wer, index) => (
                         <div className="carousel-item" key="index">
-                            <img src={`https://image.tmdb.org/t/p/w500/${wer.poster_path}`} alt="" />
+                            <img onClick={this.props.clicked.bind(this, wer.id)}  src={`https://image.tmdb.org/t/p/w500/${wer.poster_path}`} alt="" />
                             <div className="rating">
                                 <div className="percent">
                                     <span>{`${wer.vote_average * 10}`}</span>
+                                    <span className="percent-icon">%</span>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </Slider>
+                <h2 className="carousel-suptitle">Popular TV Show</h2>
+                <Slider {...settings}>
+                    {this.state.tvShow.map((rew, index) => (
+                        <div className="carousel-item" key="index">
+                            <img onClick={this.props.clicked.bind(this, rew.id)}  src={`https://image.tmdb.org/t/p/w500/${rew.poster_path}`} alt="" />
+                            <div className="rating">
+                                <div className="percent">
+                                    <span>{`${rew.vote_average * 10}`}</span>
                                     <span className="percent-icon">%</span>
                                 </div>
                             </div>

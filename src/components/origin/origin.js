@@ -1,17 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../header/header';
 import Carousel from './Carousel'
+import {useHistory } from "react-router-dom";
+
 import './origin.scss';
 
-function Origin() {
+function Origin(props) {
 
-    const [newReleases, setNewReleases] = useState("");
+    let history = useHistory();
     useEffect(() => {
 
         return () => {
 
         }
     }, [])
+   
+
+    const clickHandler = (id) => {
+        localStorage.setItem( "movieId", id)
+         history.push("/find")
+    }
+
     return (
         <section className="origin">
             <div className="container-fluid">
@@ -22,14 +31,14 @@ function Origin() {
                     <h1> Collections of movies </h1>
                     <h3>Choose Your favourite film , click on it and learn more.</h3>
                 </div>
-                </div>
-                <div className="container-fluid">
+            </div>
+            <div className="container-fluid">
                 <div className="collection-slider__trending">
                     <div className="collection-slider__inner">
-                        <Carousel />
+                        <Carousel clicked={clickHandler} />
                     </div>
                 </div>
-                </div>
+            </div>
         </section>
     )
 }

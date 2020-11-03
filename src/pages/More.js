@@ -7,6 +7,8 @@ import axios from 'axios';
 import './more.scss'
 
 let url = ''
+const filmId = localStorage.getItem.movieId
+
 class More extends Component {
     constructor(props) {
         super(props)
@@ -17,8 +19,13 @@ class More extends Component {
 
         }
     }
+
     componentDidMount() {
         this.fetchMovie(url)
+       
+       
+        
+         
     }
     componentDidUpdate(prevProps ,prevState) {
         if (this.state.movieID !== prevState.movieID) { 
@@ -26,10 +33,13 @@ class More extends Component {
         } 
     }
     fetchMovie = () => {
-        // url = `https://api.themoviedb.org/3/movie/${querry}?api_key=24cfed25ea68b234c8167f71ba903910`
-        //  url = `https://api.themoviedb.org/3/search/movie?api_key=24cfed25ea68b234c8167f71ba903910&query=${this.state.value}`
-        // url = `https://api.themoviedb.org/3/search/movie?api_key=24cfed25ea68b234c8167f71ba903910&query=${this.state.value}`
-        url = `https://api.themoviedb.org/3/movie/${this.state.movieID}?api_key=24cfed25ea68b234c8167f71ba903910`
+        var filmId = localStorage.getItem('movieId');
+        if (filmId) {
+            url = `https://api.themoviedb.org/3/movie/${filmId}?api_key=24cfed25ea68b234c8167f71ba903910`
+            localStorage.removeItem('movieId')
+        } else {
+            url = `https://api.themoviedb.org/3/movie/${this.state.movieID}?api_key=24cfed25ea68b234c8167f71ba903910`
+        }
         fetch(url)
             .then(response => response.json())
             .then(data => {

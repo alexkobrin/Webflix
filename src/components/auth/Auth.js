@@ -19,7 +19,7 @@ class Auth extends Component {
                     type: "email",
                     placeholder: "Email...",
                 },
-                value: "",
+                value: "Hey",
                 validation: {
                     isEmail: true,
                     required: true,
@@ -34,7 +34,7 @@ class Auth extends Component {
                     type: "password",
                     placeholder: "Password..."
                 },
-                value: "",
+                value: 1235,
                 validation: {
                     required: true,
                     minLength: 8
@@ -79,6 +79,14 @@ class Auth extends Component {
         return isValid;
     }
 
+    valueInput = () => {
+        let inputValue = localStorage.getItem("email")
+        return localStorage.getItem("email") ? inputValue : ""
+    }
+    componentDidMount() {
+        this.valueInput()
+        console.log(this.valueInput())
+    }
 
     inputChangeHandler = (event, controlName) => {
         const updatedControls = {
@@ -111,9 +119,8 @@ class Auth extends Component {
 
 
 
-
-
     render() {
+
 
         const formArray = []
         for (let key in this.state.controls) {
@@ -124,6 +131,7 @@ class Auth extends Component {
         }
 
         const form = formArray.map(formElement => (
+
             <Input
                 label={formElement.config.label}
                 placeholder={formElement.config.elementConfig.placeholder}
