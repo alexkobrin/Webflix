@@ -34,7 +34,7 @@ function Main() {
             <form onSubmit={submitHandler}  method="GET">
               <div className="email-form__inner">
                 <div className="email-form__input">
-                  <label className="main-label" for="main-input" placeholder="email">
+                  <label className="main-label" htmlFor="main-input" placeholder="email">
                   <input id="main-input" onChange={inputChangeHandler} className="main-input"  type="email"   minLength="5" maxLength="40" />
                <label className="placeLabel">Email adress</label>
                </label>

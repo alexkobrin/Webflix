@@ -12,7 +12,7 @@ function Card(props) {
  }
     useEffect(() => {
         let more = document.body.getElementsByClassName("more")
-        let re = more[0].setAttribute("style", `background-image: url(https://image.tmdb.org/t/p/original${data.backdrops})`)
+         more[0].setAttribute("style", `background-image: url(https://image.tmdb.org/t/p/original${data.backdrops})`)
     }, [data.backdrops])
 
 

@@ -7,7 +7,7 @@ import axios from 'axios';
 import './more.scss'
 
 let url = ''
-const filmId = localStorage.getItem.movieId
+//const filmId = localStorage.getItem.movieId
 
 class More extends Component {
     constructor(props) {
