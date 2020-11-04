@@ -8,7 +8,7 @@
 
 .wrapper {	
     max-width: 580px;
-    padding: 15px 35px 45px;
+    padding: 15px 35px 15px;
     margin: 80px auto;
     background-color: #fff;
     border: 1px solid rgba(0,0,0,0.1);  
@@ -59,10 +59,10 @@
   
   }
 
-.btn-submit,
-  .btn-switch {
-      display: block;
-      width: 100%;
+.btn-submit {
+   
+display: block;
+width: 100%;
       padding: .5rem 1rem;
       font-size: 1.25rem;
       line-height: 1.5;
@@ -73,8 +73,38 @@
       margin-bottom: 1rem;
       margin-top: 1rem;
       border: 1px solid transparent;
+      margin-right: auto;
       cursor: pointer;
        &:hover {
           background-color:#e50914;  
        }
+    }
+.have-account {
+  margin-top: 3rem; 
+}
+    .have-account__text {
+     
+      display: inline-block;
+      font-size: 1rem;
+      line-height: 1.2;
+      color: #000000;
+      
+
+    }
+     .btn-switch {
+       text-align: right;
+       margin-left: 100%;
+      display: inline-block;
+      margin-left:1rem;
+     color: darkred;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      border: none;
+      border-radius: .3rem;
+      background-color: transparent;
+     
+      &:hover {
+        color:#e50914
+      }
+      
     }

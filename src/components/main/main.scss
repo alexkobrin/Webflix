@@ -7,7 +7,7 @@
     background-image: url(../../assets/img/bg2.png);
     background-position: center 0;
     background-repeat: no-repeat;
-background-size: cover;
+        background-size: cover;
 }
 .header__inner {
      
@@ -51,7 +51,7 @@ background-size: cover;
 .main-container {
     text-align: center;
      height: 80vh;
-      transform: translateY(40%);
+     padding-top: 250px;
 
   .main-title {    
       .main-h1 {
@@ -74,7 +74,6 @@ background-size: cover;
     font-weight: 400;
 }
 .main-form {
-    
      .email-form__inner {
          display: flex;
          justify-content: center;
@@ -90,14 +89,20 @@ background-size: cover;
     }
     .main-label {
           position: relative;
+          width: 100%;
           
     }
-     .main-input{
-        min-width: 500px;
+    .email-form__input {
+        max-width: 500px;
+        min-width: 280px;
+        width: 100%;
+        text-align: left;
+    }
+     .main-input{  
+        width: 100%;
         height: 70px !important;
         border-top-right-radius: 0;
         padding: 10px 10px 0;
-        width: 100%;
          font-size: 1.2rem;
         border: none;
         text-align: left;
@@ -112,14 +117,15 @@ background-size: cover;
         display: inline-block;
          color: #ffffff;
         text-align: left;
+        min-width: 230px;
 
         .main-button {
-        min-width: 74px;
+        min-width: 100px;
         background: #f40612;
         box-shadow: 0 1px 0 rgba(0,0,0,.45);
-        font-size: 1.875rem;
+        font-size: 1.87rem;
         min-height: 70px;
-        padding: 0 1em;
+        padding: 0 0.5em;
         text-decoration: none;
         border: none;
         border-left: 1px solid #333;
@@ -139,4 +145,82 @@ background-size: cover;
      }
         
      
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        padding-top: 150px;
+    .main-title {    
+        .main-h1 {
+            font-size: 2.5rem;
+        }
+        .main-h2 {
+            font-size: 2rem;
+        } 
+    }
+
+    .email-form__button {
+        .main-button {
+        padding: 0 0.3em  ;
+        span {
+           
+            font-size: 1.5rem;
+             
+        }
+    }
+    }
+    
+}
+} 
+ 
+
+@media (max-width: 540px) {
+     
+    .main-container {
+        .main-title {    
+            .main-h1 {
+                font-size: 1.8rem;
+            }
+            .main-h2 {
+                font-size: 1.3rem;
+            } 
+        }
+
+         .email-form__inner {
+           flex-direction: column;
+          justify-content: start;
+         .placeLabel {
+            position: absolute;
+             top:35px;
+             left: 6%;
+           
+         }  
+       
+        }
+        .email-form__button {
+        .main-button {
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;    
+        }
+        }
+    }
+    .email-form__input {
+        text-align: left;
+        width: 100%;
+    }
+    .main-input{
+        margin-top: 2rem;
+         max-width: 100% !important;
+        text-align: left;
+        border-radius: 5px;
+        border-top-right-radius: 5px !important;
+        &:focus  + .placeLabel {
+            left: 3%;
+             top: 10px !important;
+             font-size: 0.8rem;
+         }       
+    }
+
+  
 }

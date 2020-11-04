@@ -45,7 +45,7 @@ class Auth extends Component {
             }
 
         },
-        isSignUp: false,
+        isSignUp: true,
         authRedirect: false
     }
 
@@ -166,11 +166,14 @@ class Auth extends Component {
                     <div className="wrapper">
                         {authRedirect}
                         <form className="form-signin" onSubmit={this.submitHandler}>
-                            <h2 className="form-signin-heading">Please Log in </h2>
+                            <h2 className="form-signin-heading"> {this.state.isSignUp ? 'Join Webflix' :  ' Sign In '}</h2>
                             {form}
                             <Button className='btn-submit'>Submit </Button>
                         </form>
-                        <Button className='btn-switch ' clicked={this.switchHandler}>Switch TO {this.state.isSignUp ? ' SIGN IN ' : 'SIGN UP'}</Button>
+                        <div className="have-account">
+                        <p className="have-account__text">Have already account ?</p>
+                        <Button className='btn-switch ' clicked={this.switchHandler}>Sign In</Button>
+                        </div>
                     </div>
                 </section>
             )
