@@ -23,9 +23,7 @@ function Origin(props) {
 
     return (
         <section className="origin">
-            <div className="container-fluid">
                 <Header />
-            </div>
             <div className="container">
                 <div className="colection-title">
                     <h1> Collections of movies </h1>

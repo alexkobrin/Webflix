@@ -52,7 +52,34 @@ export default class Carousel extends Component {
                         slidesToShow: 4,
                         slidesToScroll: 3,
                         infinite: true,
-                        dots: true
+                         
+                    }
+                },
+                {
+                    breakpoint:850,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                         
+                    }
+                },
+                {
+                    breakpoint: 750,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                         
+                    }
+                },
+                {
+                    breakpoint: 540,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                         
                     }
                 }
             ]

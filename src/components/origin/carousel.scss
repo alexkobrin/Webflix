@@ -58,3 +58,57 @@ color: #020724;
  }
     
 }
+
+
+
+@media(max-width: 850px) {
+    .carousel-item {
+       
+      margin-left: 40px;
+        
+    
+    }
+}
+@media(max-width: 570px) {
+    .origin{
+    .carousel-item {
+      margin-left: 40px;
+    }
+    .colection-title h1 {
+          font-size: 2rem;   
+        }
+    .colection-title h3 {
+          max-width:350px;
+          font-size: 1.2rem;  
+        }
+       
+    }
+    .header__inner {
+        padding-top: 1rem;
+        font-size: 1rem;
+    }
+    .header-logo {
+        display: none;
+    }
+    .carousel-suptitle {
+        
+        text-align: center;
+       }
+         
+}
+
+@media(max-width: 360px) {
+    .origin{
+        .header-nav .navigation .navLink + .navLink {
+            margin-left: 0.6rem;
+       }
+
+       .carousel-suptitle {
+        font-size: 1rem;
+        text-align: center;
+       }
+         
+        
+}
+
+}

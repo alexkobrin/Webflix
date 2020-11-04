@@ -5,7 +5,7 @@ import Input from '../input/input'
 import './auth.scss';
 import Button from '../button/button';
 import axios from 'axios'
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 //import { connect } from 'react-redux';
 //import * as actions from '../../store/actions';
 
@@ -137,48 +137,50 @@ class Auth extends Component {
             authRedirect = <Redirect to="/origin" />
         }
 
-            const formArray = []
-            for (let key in this.state.controls) {
-                formArray.push({
-                    id: key,
-                    config: this.state.controls[key]
-                });
-            }
-
-            const form = formArray.map(formElement => (
-                <Input
-                    label={formElement.config.label}
-                    placeholder={formElement.config.elementConfig.placeholder}
-                    className='form-control'
-                    key={formElement.id}
-                    type={formElement.config.elementConfig.type}
-                    elementType={formElement.config.elementType}
-                    value={formElement.config.value}
-                    invalid={!formElement.config.valid}
-                    shouldValidate={formElement.config.validation}
-                    touched={formElement.config.touched}
-                    changed={(event) => this.inputChangeHandler(event, formElement.id)}
-                ></Input>
-            ))
-            return (
-                <section className="auth">
-                    <Header />
-                    <div className="wrapper">
-                        {authRedirect}
-                        <form className="form-signin" onSubmit={this.submitHandler}>
-                            <h2 className="form-signin-heading"> {this.state.isSignUp ? 'Join Webflix' :  ' Sign In '}</h2>
-                            {form}
-                            <Button className='btn-submit'>Submit </Button>
-                        </form>
-                        <div className="have-account">
-                        <p className="have-account__text">Have already account ?</p>
-                        <Button className='btn-switch ' clicked={this.switchHandler}>Sign In</Button>
-                        </div>
-                    </div>
-                </section>
-            )
+        const formArray = []
+        for (let key in this.state.controls) {
+            formArray.push({
+                id: key,
+                config: this.state.controls[key]
+            });
         }
 
+        const form = formArray.map(formElement => (
+            <Input
+                label={formElement.config.label}
+                placeholder={formElement.config.elementConfig.placeholder}
+                className='form-control'
+                key={formElement.id}
+                type={formElement.config.elementConfig.type}
+                elementType={formElement.config.elementType}
+                value={formElement.config.value}
+                invalid={!formElement.config.valid}
+                shouldValidate={formElement.config.validation}
+                touched={formElement.config.touched}
+                changed={(event) => this.inputChangeHandler(event, formElement.id)}
+            ></Input>
+        ))
+        return (
+            <section className="auth">
+                <Header />
+                <div className="container-fluid">
+                <div className="wrapper">
+                    {authRedirect}
+                    <form className="form-signin" onSubmit={this.submitHandler}>
+                        <h2 className="form-signin-heading"> {this.state.isSignUp ? 'Join Webflix' : ' Sign In '}</h2>
+                        {form}
+                        <Button className='btn-submit'>Submit </Button>
+                    </form>
+                    <div className="have-account">
+                        <p className="have-account__text">Have already account ?</p>
+                        <Button className='btn-switch ' clicked={this.switchHandler}>Sign In</Button>
+                    </div>
+                </div>
+                </div>
+            </section>
+        )
     }
 
-    export default Auth
+}
+
+export default Auth

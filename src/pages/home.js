@@ -6,7 +6,7 @@ function home() {
     return (
         <div>
             <Main/> 
-            {/* <Enjoy/> */}
+            <Enjoy/>
         </div>
     )
 }
