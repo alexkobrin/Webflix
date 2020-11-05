@@ -1,0 +1,22 @@
+<svg width="161" height="80" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>logo</title>
+  <rect x="-1" y="-1" width="163" height="82" id="canvas_background" fill="none"/>
+  <g id="canvasGrid" display="none">
+   <rect id="svg_1" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+  </g>
+ </g>
+
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_2">
+   <text fill="#ff0000" stroke="#ff0000" stroke-width="0.5" x="53.91368" y="146.9586" id="svg_6" font-size="32" font-family="'Trebuchet MS', Gadget, sans-serif" text-anchor="start" xml:space="preserve" transform="matrix(1.2361, 0, 0, 1.67544, -66.6427, -177.946)">W</text>
+   <text fill="#ff0000" stroke="#ff0000" stroke-width="0.5" x="36.64443" y="95.35003" id="svg_7" font-size="32" font-family="'Trebuchet MS', Gadget, sans-serif" text-anchor="start" xml:space="preserve" transform="matrix(1, 0, 0, 1.21312, 0, -58.2638)">E</text>
+   <text fill="#ff0000" stroke="#ff0000" stroke-width="0.5" x="56.99272" y="92.66745" id="svg_8" font-size="32" font-family="'Trebuchet MS', Gadget, sans-serif" text-anchor="start" xml:space="preserve" transform="matrix(1, 0, 0, 1.20569, 0, -54.0252)">B</text>
+   <text fill="#ff0000" stroke="#ff0000" stroke-width="0.5" x="80.87806" y="147.98296" id="svg_11" font-size="32" font-family="'Trebuchet MS', Gadget, sans-serif" text-anchor="start" xml:space="preserve" transform="matrix(1, 0, 0, 1.72704, 0, -203.681)">F</text>
+   <text fill="#ff0000" stroke="#ff0000" stroke-width="0.5" x="100.94175" y="90.15846" id="svg_12" font-size="32" font-family="'Trebuchet MS', Gadget, sans-serif" text-anchor="start" xml:space="preserve" transform="matrix(1, 0, 0, 1.18956, 0, -49.7308)">L</text>
+   <text fill="#ff0000" stroke="#ff0000" stroke-width="0.5" x="123.23474" y="87.57087" id="svg_13" font-size="32" font-family="'Trebuchet MS', Gadget, sans-serif" text-anchor="start" xml:space="preserve" transform="matrix(1, 0, 0, 1.17342, 0, -45.4273)">I</text>
+   <text fill="#ff0000" stroke="#ff0000" stroke-width="0.5" x="193.04932" y="147.01322" id="svg_14" font-size="32" font-family="'Trebuchet MS', Gadget, sans-serif" text-anchor="start" xml:space="preserve" transform="matrix(1.28345, 0, 0, 1.66367, -109.224, -176.214)">X</text>
+  </g>
+ </g>
+</svg>
