@@ -1,5 +1,5 @@
 import React from 'react'
-import Origin from '../components/origin/origin'
+import Origin from '../components/origin/Origin'
 
 function origin() {
     return (
