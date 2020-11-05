@@ -177,6 +177,7 @@
 @media (max-width: 540px) {
      
     .main-container {
+        
         .main-title {    
             .main-h1 {
                 font-size: 1.8rem;
@@ -185,17 +186,14 @@
                 font-size: 1.3rem;
             } 
         }
-
          .email-form__inner {
            flex-direction: column;
           justify-content: start;
          .placeLabel {
             position: absolute;
              top:35px;
-             left: 6%;
-           
-         }  
-       
+             left: 6%;          
+         }        
         }
         .email-form__button {
         .main-button {

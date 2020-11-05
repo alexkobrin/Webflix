@@ -15,25 +15,28 @@
    
    background-color: #000;
    color: #fff;
-   padding: 0 15px;
-   min-width: 300px;
+   padding: 0 5px;
+   min-width: 290px;
    opacity: 0.85;
+   margin-bottom: 1rem;
+  // padding-bottom: 1rem;
    .card-img__inner   {
-     
-  padding-right: 0px;
-  padding-left: 0px;
+     width: 100%;
+     height: 100%;
+  padding-right: 15px;
+  padding-left: 10px;
     img {
         width: 100%;
-       
         max-height: 80vh;
         object-fit: fill;
+         
     }
 }
 }
 
 .card__title {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 2.2em;
   text-transform: uppercase;
   font-weight: 600;
@@ -74,3 +77,38 @@ font-size: 1.6em;
 line-height: 1.1em;
 margin-bottom: 1rem;
 }
+
+
+@media(max-width: 870px) {
+  .card__text {
+    margin-bottom: 1rem;
+}
+.card__moto {
+   
+margin-bottom: .5rem;
+}
+.card_runtime-value ,
+ .card_vote-rating,
+  .card_budjet-value,
+   .card_release-date {
+font-size: 1.2em;
+margin-bottom: .4rem  ;
+}
+.card_studio ,.card_release,.card_budjet,
+.card_vote,.card_runtime {
+line-height: 1.3;
+margin-bottom: .5rem;
+}
+}
+
+@media(max-width: 765px) {
+  .card-response__inner {
+      padding-bottom: 1rem;
+    .card-img__inner   {
+      padding-right: 10px;
+      padding-left: 10px;
+ }
+}
+}
+
+ 

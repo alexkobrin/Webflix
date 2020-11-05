@@ -3,7 +3,7 @@
 .react-autosuggest__container {
   position: relative;
   text-align: right;
-  margin-bottom: 1rem;
+  margin-bottom: .2rem;
  
 }
 .react-autosuggest__input {
@@ -77,6 +77,18 @@
   background-color: #0C7EAF;
 }
 
-// .react-autosuggest__suggestion--focused .highlight {
-//   color: #120000;
-// }
+@media(max-width: 560px) {
+  .more {
+    .header__inner {
+      margin-bottom: 1rem;
+      .navigation .navLink + .navLink{ 
+        margin-left: 0.5rem;
+      
+      }
+      
+    }
+    .header-logo {
+      display: none;
+    }
+  }
+}

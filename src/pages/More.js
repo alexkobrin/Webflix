@@ -8,7 +8,6 @@ import './more.scss'
 
 let url = ''
 //const filmId = localStorage.getItem.movieId
-
 class More extends Component {
     constructor(props) {
         super(props)
@@ -19,13 +18,8 @@ class More extends Component {
 
         }
     }
-
     componentDidMount() {
-        this.fetchMovie(url)
-       
-       
-        
-         
+        this.fetchMovie(url)    
     }
     componentDidUpdate(prevProps ,prevState) {
         if (this.state.movieID !== prevState.movieID) { 
@@ -66,7 +60,6 @@ class More extends Component {
             value: newValue
         });
     };
-
     onSuggestionsClearRequested = () => {
         this.setState({
             suggestions: [],
@@ -81,7 +74,6 @@ class More extends Component {
         })
         return suggestions.title
     }
-
     render() {
         const { value, suggestions } = this.state;
         return (

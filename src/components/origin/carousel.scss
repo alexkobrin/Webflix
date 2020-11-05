@@ -71,6 +71,9 @@ color: #020724;
 }
 @media(max-width: 570px) {
     .origin{
+        .header-logo {
+            display: none;
+        }
     .carousel-item {
       margin-left: 40px;
     }
@@ -87,9 +90,7 @@ color: #020724;
         padding-top: 1rem;
         font-size: 1rem;
     }
-    .header-logo {
-        display: none;
-    }
+    
     .carousel-suptitle {
         
         text-align: center;
