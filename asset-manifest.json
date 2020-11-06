@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/webflix/static/css/main.3db27a5e.chunk.css",
-    "main.js": "/webflix/static/js/main.817d2130.chunk.js",
-    "main.js.map": "/webflix/static/js/main.817d2130.chunk.js.map",
+    "main.css": "/webflix/static/css/main.089583bd.chunk.css",
+    "main.js": "/webflix/static/js/main.25278a13.chunk.js",
+    "main.js.map": "/webflix/static/js/main.25278a13.chunk.js.map",
     "runtime-main.js": "/webflix/static/js/runtime-main.539a63a1.js",
     "runtime-main.js.map": "/webflix/static/js/runtime-main.539a63a1.js.map",
-    "static/css/2.20aa2d7b.chunk.css": "/webflix/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.4ee5bb22.chunk.js": "/webflix/static/js/2.4ee5bb22.chunk.js",
-    "static/js/2.4ee5bb22.chunk.js.map": "/webflix/static/js/2.4ee5bb22.chunk.js.map",
+    "static/css/2.ce0574ce.chunk.css": "/webflix/static/css/2.ce0574ce.chunk.css",
+    "static/js/2.6b072b4c.chunk.js": "/webflix/static/js/2.6b072b4c.chunk.js",
+    "static/js/2.6b072b4c.chunk.js.map": "/webflix/static/js/2.6b072b4c.chunk.js.map",
     "index.html": "/webflix/index.html",
-    "static/css/2.20aa2d7b.chunk.css.map": "/webflix/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.3db27a5e.chunk.css.map": "/webflix/static/css/main.3db27a5e.chunk.css.map",
-    "static/js/2.4ee5bb22.chunk.js.LICENSE.txt": "/webflix/static/js/2.4ee5bb22.chunk.js.LICENSE.txt",
+    "static/css/2.ce0574ce.chunk.css.map": "/webflix/static/css/2.ce0574ce.chunk.css.map",
+    "static/css/main.089583bd.chunk.css.map": "/webflix/static/css/main.089583bd.chunk.css.map",
+    "static/js/2.6b072b4c.chunk.js.LICENSE.txt": "/webflix/static/js/2.6b072b4c.chunk.js.LICENSE.txt",
     "static/media/auth.scss": "/webflix/static/media/bd.b77579c1.webp",
     "static/media/main.scss": "/webflix/static/media/bg2.331dbbd2.png",
     "static/media/logo.acc6bb50.svg": "/webflix/static/media/logo.acc6bb50.svg",
     "static/media/phone-fin.3458688d.jpg": "/webflix/static/media/phone-fin.3458688d.jpg",
+    "static/media/slick-theme.css": "/webflix/static/media/slick.c94f7671.ttf",
     "static/media/trailer1.6d1168e1.mp4": "/webflix/static/media/trailer1.6d1168e1.mp4",
     "static/media/trailer2.2d427c23.mp4": "/webflix/static/media/trailer2.2d427c23.mp4",
     "static/media/tv-image.788c5242.png": "/webflix/static/media/tv-image.788c5242.png",
@@ -23,9 +24,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.539a63a1.js",
-    "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.4ee5bb22.chunk.js",
-    "static/css/main.3db27a5e.chunk.css",
-    "static/js/main.817d2130.chunk.js"
+    "static/css/2.ce0574ce.chunk.css",
+    "static/js/2.6b072b4c.chunk.js",
+    "static/css/main.089583bd.chunk.css",
+    "static/js/main.25278a13.chunk.js"
   ]
 }
