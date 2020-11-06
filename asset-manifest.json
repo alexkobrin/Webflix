@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/webflix/static/css/main.3db27a5e.chunk.css",
-    "main.js": "/webflix/static/js/main.45416882.chunk.js",
-    "main.js.map": "/webflix/static/js/main.45416882.chunk.js.map",
+    "main.js": "/webflix/static/js/main.817d2130.chunk.js",
+    "main.js.map": "/webflix/static/js/main.817d2130.chunk.js.map",
     "runtime-main.js": "/webflix/static/js/runtime-main.539a63a1.js",
     "runtime-main.js.map": "/webflix/static/js/runtime-main.539a63a1.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/webflix/static/css/2.20aa2d7b.chunk.css",
@@ -26,6 +26,6 @@
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.4ee5bb22.chunk.js",
     "static/css/main.3db27a5e.chunk.css",
-    "static/js/main.45416882.chunk.js"
+    "static/js/main.817d2130.chunk.js"
   ]
 }
