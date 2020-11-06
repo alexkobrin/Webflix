@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-
+import { NavLink } from 'react-router-dom'
 
 function navItem() {
 
@@ -14,11 +13,11 @@ function navItem() {
     return (
         <ul className="navigation">
             {navLink.map((item, index) => (
-                <Link key={index} className="navLink" to={item.path}>{item.name}</Link>
+                <NavLink key={index} className="navLink" to={item.path}>{item.name}</NavLink>
             ))}
             {  localStorage.getItem('userId') ?
-                <Link onClick={() => localStorage.removeItem('userId')} className="navLink" to="/">Logout</Link>
-                : <Link className="navLink" to="/auth">Sign In</Link>
+                <NavLink onClick={() => localStorage.removeItem('userId')} className="navLink" to="/">Logout</NavLink>
+                : <NavLink className="navLink" to="/auth">Sign In</NavLink>
             }
 
         </ul>

@@ -51,6 +51,7 @@ class Auth extends Component {
 
     componentDidMount() {
         localStorage.removeItem('email')
+
     }
 
     checkValidity(value, rules) {
@@ -108,6 +109,7 @@ class Auth extends Component {
             password: this.state.controls.password.value,
             returnSecureToken: true
         }
+        
 
         let url = "";
         if (this.state.isSignUp) {
@@ -127,10 +129,6 @@ class Auth extends Component {
             })
 
     }
-
-
-
-
     render() {
         let authRedirect = "";
         if (this.state.authRedirect) {

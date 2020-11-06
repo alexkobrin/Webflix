@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios"
-import './carousel.scss';
 import Slider from "react-slick";
+
+import './carousel.scss';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 export default class Carousel extends Component {
     constructor(props) {
@@ -27,13 +30,13 @@ export default class Carousel extends Component {
                 this.setState({
                     popular: response.data.results
                 })
-            }) 
+            })
 
         axios.get("https:api.themoviedb.org/3/discover/tv?api_key=24cfed25ea68b234c8167f71ba903910&language=en-US&page=1")
             .then(response => {
                 this.setState({
                     tvShow: response.data.results
-                }) 
+                })
             })
     }
     render() {
@@ -52,16 +55,16 @@ export default class Carousel extends Component {
                         slidesToShow: 4,
                         slidesToScroll: 3,
                         infinite: true,
-                         
+
                     }
                 },
                 {
-                    breakpoint:850,
+                    breakpoint: 850,
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 3,
                         infinite: true,
-                         
+
                     }
                 },
                 {
@@ -70,7 +73,7 @@ export default class Carousel extends Component {
                         slidesToShow: 2,
                         slidesToScroll: 2,
                         infinite: true,
-                         
+
                     }
                 },
                 {
@@ -79,7 +82,7 @@ export default class Carousel extends Component {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         infinite: true,
-                         
+
                     }
                 }
             ]
@@ -90,7 +93,7 @@ export default class Carousel extends Component {
                 <Slider {...settings}>
                     {this.state.trending.map((film, index) => (
                         <div className="carousel-item" key="index">
-                           
+
                             <img onClick={this.props.clicked.bind(this, film.id)} src={`https://image.tmdb.org/t/p/w500/${film.poster_path}`} alt="" />
                             <div className="rating">
                                 <div className="percent">
@@ -106,7 +109,7 @@ export default class Carousel extends Component {
                 <Slider {...settings}>
                     {this.state.popular.map((wer, index) => (
                         <div className="carousel-item" key="index">
-                            <img onClick={this.props.clicked.bind(this, wer.id)}  src={`https://image.tmdb.org/t/p/w500/${wer.poster_path}`} alt="" />
+                            <img onClick={this.props.clicked.bind(this, wer.id)} src={`https://image.tmdb.org/t/p/w500/${wer.poster_path}`} alt="" />
                             <div className="rating">
                                 <div className="percent">
                                     <span>{`${wer.vote_average * 10}`}</span>
@@ -120,7 +123,7 @@ export default class Carousel extends Component {
                 <Slider {...settings}>
                     {this.state.tvShow.map((rew, index) => (
                         <div className="carousel-item" key="index">
-                            <img onClick={this.props.clicked.bind(this, rew.id)}  src={`https://image.tmdb.org/t/p/w500/${rew.poster_path}`} alt="" />
+                            <img onClick={this.props.clicked.bind(this, rew.id)} src={`https://image.tmdb.org/t/p/w500/${rew.poster_path}`} alt="" />
                             <div className="rating">
                                 <div className="percent">
                                     <span>{`${rew.vote_average * 10}`}</span>

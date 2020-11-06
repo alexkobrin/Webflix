@@ -90,7 +90,7 @@ class More extends Component {
                         suggestions={suggestions}
                         onSuggestionsFetchRequested={async ({ value }) => {
                             if (!value) {
-                                // suggestions([]); 
+                          
                                 return;
                             }
                             try {
