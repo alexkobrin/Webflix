@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/webflix/static/css/main.089583bd.chunk.css",
-    "main.js": "/webflix/static/js/main.25278a13.chunk.js",
-    "main.js.map": "/webflix/static/js/main.25278a13.chunk.js.map",
+    "main.js": "/webflix/static/js/main.d57f9ce7.chunk.js",
+    "main.js.map": "/webflix/static/js/main.d57f9ce7.chunk.js.map",
     "runtime-main.js": "/webflix/static/js/runtime-main.539a63a1.js",
     "runtime-main.js.map": "/webflix/static/js/runtime-main.539a63a1.js.map",
     "static/css/2.ce0574ce.chunk.css": "/webflix/static/css/2.ce0574ce.chunk.css",
-    "static/js/2.6b072b4c.chunk.js": "/webflix/static/js/2.6b072b4c.chunk.js",
-    "static/js/2.6b072b4c.chunk.js.map": "/webflix/static/js/2.6b072b4c.chunk.js.map",
+    "static/js/2.7febdb68.chunk.js": "/webflix/static/js/2.7febdb68.chunk.js",
+    "static/js/2.7febdb68.chunk.js.map": "/webflix/static/js/2.7febdb68.chunk.js.map",
     "index.html": "/webflix/index.html",
     "static/css/2.ce0574ce.chunk.css.map": "/webflix/static/css/2.ce0574ce.chunk.css.map",
     "static/css/main.089583bd.chunk.css.map": "/webflix/static/css/main.089583bd.chunk.css.map",
-    "static/js/2.6b072b4c.chunk.js.LICENSE.txt": "/webflix/static/js/2.6b072b4c.chunk.js.LICENSE.txt",
+    "static/js/2.7febdb68.chunk.js.LICENSE.txt": "/webflix/static/js/2.7febdb68.chunk.js.LICENSE.txt",
     "static/media/auth.scss": "/webflix/static/media/bd.b77579c1.webp",
     "static/media/main.scss": "/webflix/static/media/bg2.331dbbd2.png",
     "static/media/logo.acc6bb50.svg": "/webflix/static/media/logo.acc6bb50.svg",
@@ -25,8 +25,8 @@
   "entrypoints": [
     "static/js/runtime-main.539a63a1.js",
     "static/css/2.ce0574ce.chunk.css",
-    "static/js/2.6b072b4c.chunk.js",
+    "static/js/2.7febdb68.chunk.js",
     "static/css/main.089583bd.chunk.css",
-    "static/js/main.25278a13.chunk.js"
+    "static/js/main.d57f9ce7.chunk.js"
   ]
 }
