@@ -3,7 +3,7 @@ import axios from "axios"
 import Slider from "react-slick";
 
 import './carousel.scss';
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default class Carousel extends Component {
@@ -24,6 +24,9 @@ export default class Carousel extends Component {
                     trending: response.data.results
                 })
             })
+            .catch(error => {
+                console.log(error.response.data)
+            })
 
         axios.get("https:api.themoviedb.org/3/movie/popular?api_key=24cfed25ea68b234c8167f71ba903910&language=en-US")
             .then(response => {
@@ -31,12 +34,18 @@ export default class Carousel extends Component {
                     popular: response.data.results
                 })
             })
+            .catch(error => {
+                console.log(error.response.data)
+            })
 
         axios.get("https:api.themoviedb.org/3/discover/tv?api_key=24cfed25ea68b234c8167f71ba903910&language=en-US&page=1")
             .then(response => {
                 this.setState({
                     tvShow: response.data.results
                 })
+            })
+            .catch(error => {
+                console.log(error.response.data)
             })
     }
     render() {
