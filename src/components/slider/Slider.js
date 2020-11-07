@@ -3,9 +3,9 @@ import Header from '../header/header';
 import Carousel from './Carousel'
 import { useHistory} from "react-router-dom";
 
-import './origin.scss';
+import './slider.scss';
 
-function Origin(props) {
+function Slider(props) {
 
     let history = useHistory();
     const clickHandler = (id) => {
@@ -33,4 +33,4 @@ function Origin(props) {
     )
 }
 
-export default Origin
+export default Slider

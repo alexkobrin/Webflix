@@ -7,7 +7,7 @@ function navItem() {
     if (localStorage.getItem('userId')) {
         navLink = [
             { path: "/find", name: "More Details" },
-            { path: "/origin", name: "Origin" }
+            { path: "/slider", name: "Slider" }
         ]
     }
     return (

@@ -109,7 +109,7 @@ class Auth extends Component {
             password: this.state.controls.password.value,
             returnSecureToken: true
         }
-        
+
 
         let url = "";
         if (this.state.isSignUp) {
@@ -132,7 +132,7 @@ class Auth extends Component {
     render() {
         let authRedirect = "";
         if (this.state.authRedirect) {
-            authRedirect = <Redirect to="/origin" />
+            authRedirect = <Redirect to="/slider" />
         }
 
         const formArray = []
@@ -162,18 +162,18 @@ class Auth extends Component {
             <section className="auth">
                 <Header />
                 <div className="container-fluid">
-                <div className="wrapper">
-                    {authRedirect}
-                    <form className="form-signin" onSubmit={this.submitHandler}>
-                        <h2 className="form-signin-heading"> {this.state.isSignUp ? 'Join Webflix' : ' Sign In '}</h2>
-                        {form}
-                        <Button className='btn-submit'>Submit </Button>
-                    </form>
-                    <div className="have-account">
-                        <p className="have-account__text">Have already account ?</p>
-                        <Button className='btn-switch ' clicked={this.switchHandler}>Sign In</Button>
+                    <div className="wrapper">
+                        {authRedirect}
+                        <form className="form-signin" onSubmit={this.submitHandler}>
+                            <h2 className="form-signin-heading"> {this.state.isSignUp ? 'Join Webflix' : ' Sign In '}</h2>
+                            {form}
+                            <Button className='btn-submit'>Submit </Button>
+                        </form>
+                        <div className="have-account">
+                            <p className="have-account__text">Have already account ?</p>
+                            <Button className='btn-switch ' clicked={this.switchHandler}>Sign In</Button>
+                        </div>
                     </div>
-                </div>
                 </div>
             </section>
         )

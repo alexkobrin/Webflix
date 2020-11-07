@@ -6,14 +6,16 @@ import { Container, Row, Col } from 'reactstrap';
 
 function Card(props) {
     let data = props.data
-    let imageUrl =""
- if (data.poster !==undefined) {
-      imageUrl= ` https://image.tmdb.org/t/p/w500${data.poster} ` 
- }
+    let imageUrl = ""
+    if (data.poster !== undefined) {
+        imageUrl = ` https://image.tmdb.org/t/p/w500${data.poster} `
+    }
     useEffect(() => {
         let more = document.body.getElementsByClassName("more")
-         more[0].setAttribute("style", `background-image: url(https://image.tmdb.org/t/p/original${data.backdrops})`)
-    }, [data.backdrops])
+        if (data.poster !== data.backdrops) {
+            more[0].setAttribute("style", `background-image: url(https://image.tmdb.org/t/p/original${data.backdrops})`)
+        }
+    }, [data.backdrops, data.poster])
 
 
 

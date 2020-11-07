@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-//import Search from '../components/search/search'
+ 
 import Card from '../components/card/card';
 import Header from '../components/header/header'
 import Autosuggest from 'react-autosuggest';
@@ -7,7 +7,7 @@ import axios from 'axios';
 import './more.scss'
 
 let url = ''
-//const filmId = localStorage.getItem.movieId
+ 
 class More extends Component {
     constructor(props) {
         super(props)

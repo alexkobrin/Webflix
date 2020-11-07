@@ -15,7 +15,6 @@ function Main() {
 
   const inputChangeHandler = (event) => {
     const inputValue = event.target.value
-    console.log(inputValue)
     localStorage.setItem("email", inputValue)
 
   }

@@ -1,10 +1,10 @@
 import React from 'react'
-import Origin from '../components/origin/Origin'
+import Slider from '../components/slider/Slider'
 
 function origin() {
     return (
         <div>
-            <Origin/>
+            <Slider/>
         </div>
     )
 }
