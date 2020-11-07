@@ -18,7 +18,7 @@ export default class Carousel extends Component {
         }
     }
     componentDidMount() {
-        axios.get("https:api.themoviedb.org/3/movie/upcoming?api_key=24cfed25ea68b234c8167f71ba903910&language=en-US&page=1")
+        axios.get("https://api.themoviedb.org/3/movie/upcoming?api_key=24cfed25ea68b234c8167f71ba903910&language=en-US&page=1")
             .then(response => {
                 this.setState({
                     trending: response.data.results
@@ -28,7 +28,7 @@ export default class Carousel extends Component {
                 console.log(error.response.data)
             })
 
-        axios.get("https:api.themoviedb.org/3/movie/popular?api_key=24cfed25ea68b234c8167f71ba903910&language=en-US")
+        axios.get("https://api.themoviedb.org/3/movie/popular?api_key=24cfed25ea68b234c8167f71ba903910&language=en-US")
             .then(response => {
                 this.setState({
                     popular: response.data.results
@@ -38,14 +38,11 @@ export default class Carousel extends Component {
                 console.log(error.response.data)
             })
 
-        axios.get("https:api.themoviedb.org/3/discover/tv?api_key=24cfed25ea68b234c8167f71ba903910&language=en-US&page=1")
+        axios.get("https://api.themoviedb.org/3/discover/tv?api_key=24cfed25ea68b234c8167f71ba903910&language=en-US&page=1")
             .then(response => {
                 this.setState({
                     tvShow: response.data.results
                 })
-            })
-            .catch(error => {
-                console.log(error.response.data)
             })
     }
     render() {
